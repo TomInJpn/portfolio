@@ -124,6 +124,9 @@ article .main_image img{
   opacity:0.5;
   transform: rotate(5deg);
 }
+article .main_image+section{
+  position: relative;
+}
 article rb{
   margin:20px 0 0;
   padding:20px 0 0;
