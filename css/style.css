@@ -17,6 +17,7 @@ html{
 }
 body {
   background:#000000;
+  overflow-x: hidden;
 }
 .row{
   margin:0;
@@ -81,11 +82,11 @@ header li{
   font-size:0.8rem;
 }
 header li:first-of-type{
-  margin:5px 5px 5px 105px;
+  margin:5px 5px 5px 120px;
 }
 header li a{
   position:relative;
-  display:inline-block;
+  display:block;
   color:#ffffff;
   cursor: pointer;
 }
@@ -115,13 +116,13 @@ article{
 
 article .main_image{
   width: 700px;
-  position: absolute;
+  position: fixed;
   left: -300px;
-  top: 200px;
-  transform: rotate(5deg);
+  top: 300px;
 }
 article .main_image img{
   opacity:0.5;
+  transform: rotate(5deg);
 }
 article rb{
   margin:20px 0 0;
@@ -147,8 +148,18 @@ article th{
 article td{
   padding:10px 0;
 }
-
-
+article ul{
+  max-width:700px;
+}
+article .card-body p,li,div{
+  color:#666666;
+}
+article .card-body div{
+  font-size:0.8rem;
+}
+article .card-title{
+  color:#000000;
+}
 
 
 
@@ -164,9 +175,17 @@ article td{
     transform: scale(.5);
     transform-origin: 100% 0;
   }
+  header li{
+    width:100px;
+  }
+
+
 
   article th{
     width:100px;
+  }
+  article .card-group{
+    margin:0 0 0 100px;
   }
 
 }

@@ -14,13 +14,13 @@
 
 <header class="header" class="container">
   <div class="row">
-    <h1>Portforio</h1>
+    <h1>Portfolio</h1>
     <p>雑草のように</p>
   </div>
   <nav class="col-xs-6">
     <ul class="row">
       <li class="col-xs-2"><a href="#abountMe">About me</a></li>
-      <li class="col-xs-2"><a href="#portfolio">Portforio</a></li>
+      <li class="col-xs-2"><a href="#portfolio">Portfolio</a></li>
       <li class="col-xs-2"><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -34,7 +34,7 @@
     <div class="row">
       <rb class="col-sm-12" id="abountMe">About me</rb>
       <h2 class="col-sm-12">自己紹介</h2>
-      <table summary="Self-introduction">
+      <table>
         <tr>
           <th>生年</th>
           <td><time datetime="1973">1973年</time></td>
@@ -69,7 +69,7 @@
         <tr>
           <th>プログラミングについて</th>
           <td>
-            <p>元来、ものづくりが好きで、工場に勤めておりました。</p><p>ドライバーの回し方などの技術から工程の管理や進捗の確認。5Sの徹底や前準備。こだわるところはこだわり、そうでない部分は効率優先など、プログラミングにはその全てが詰まっていて、工場のように大規模な土地を必要としない、非常に魅力的な分野に感じております。</p><p>また、改廃が早いので一生学んで行けること、PCがあればどこでも学習が可能なことも魅力の一つかと考えております。</p>
+            <p>元来、ものづくりが好きで、工場に勤めておりました。</p><p>ドライバーの回し方などの技術から工程の管理や進捗の確認。5Sの徹底や前準備。こだわるところはこだわり、そうでない部分は効率優先など、プログラミングにはその全てが詰まっていて、工場のように大規模な土地を必要としない、非常に魅力的なものづくりに感じております。</p><p>また、改廃が早いので一生学んで行けること、PCがあればどこでも学習が可能なことも魅力の一つかと考えております。</p>
           </td>
         </tr>
       </table>
@@ -80,23 +80,80 @@
     <div class="row">
       <rb class="col-sm-12" id="portfolio">Portfolio</rb>
       <h2 class="col-sm-12">ポートフォリオ</h2>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <ul class="card-group">
+        <li class="card">
+          <div class="card-body">
+            <h5 class="card-title"><div>個人制作</div>Portfolio</h5>
+            <img src="img/portfolio_pf.jpg" alt="">
+            <p class="card-text mt-3">こちらのサイトです。Bootrsrapにチャレンジしてみました。</p>
+            <a href="https://github.com/TomInJpn/portfolio" class="card-text text-white bg-dark badge align-middle" roll="button" target="”_blank”">
+              <small class="fa fa-github" aria-hidden="true"><small class="font-weight-bold"> GitHub</small></small>
+            </a>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-body">
+            <h5 class="card-title"><div>個人制作</div>フリマサンプル</h5>
+            <img src="img/portfolio_frema_i.jpg" alt="">
+            <p class="card-text mt-3">カリキュラム外の内容にチャレンジしました。後述のチーム開発と同期間に個人で全て制作しました。詳細はREADMEを御覧下さい。</p>
+            <a href="https://github.com/TomInJpn/frema-app" class="card-text text-white bg-dark badge align-middle" roll="button" target="”_blank”">
+              <small class="fa fa-github" aria-hidden="true"><small class="font-weight-bold"> GitHub</small></small>
+            </a>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-body">
+            <h5 class="card-title"><div>チーム制作/カリキュラム</div>フリマサンプル</h5>
+            <img src="img/portfolio_frema_t.jpg" alt="">
+            <p class="card-text mt-3">フリーマーケットのサンプルサイトです。担当箇所は</p>
+            <ul>
+              <li><div>【フロント】</div>User sign in/out</li>
+              <li><div>【サーバー】</div>User sign in/out</li>
+              <li><div>【サーバー】</div>購入機能</li>
+            </ul>
+            <a href="https://github.com/TomInJpn/freeMarket" class="card-text text-white bg-dark badge align-middle" roll="button" target="”_blank”">
+              <small class="fa fa-github" aria-hidden="true"><small class="font-weight-bold"> GitHub</small></small>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="row mt-3">
+      <ul class="card-group">
+        <li class="card">
+          <div class="card-body">
+            <h5 class="card-title"><div>個人制作/カリキュラム</div>chat-space</h5>
+            <img src="img/portfolio_cs.jpg" alt="">
+            <p class="card-text mt-3">プログラミングスクールのカリキュラムで作成しました。チャットアプリです。</p>
+            <a href="https://github.com/TomInJpn/chat-space" class="card-text text-white bg-dark badge align-middle" roll="button" target="”_blank”">
+              <small class="fa fa-github" aria-hidden="true"><small class="font-weight-bold"> GitHub</small></small>
+            </a>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-body">
+            <h5 class="card-title"><div>個人制作</div>map-space※製作中</h5>
+            <img src="img/portfolio_ms.jpg" alt="">
+            <p class="card-text mt-3">地図にマーカーでメモができるアプリです。フリマアプリ学習以前に製作。フリマアプリ制作後、知識が増えたため、3回目の作り直しを予定しております。</p>
+            <a href="https://github.com/TomInJpn/map-space" class="card-text text-white bg-dark badge align-middle" roll="button" target="”_blank”">
+              <small class="fa fa-github" aria-hidden="true"><small class="font-weight-bold"> GitHub</small></small>
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
+</article>
 
+
+<footer>
   <section class="container-fluid">
     <div class="row">
       <rb class="col-sm-12" id="contact">Contact</rb>
       <h2 class="col-sm-12">コンタクト</h2>
     </div>
   </section>
-</article>
-
-
-<footer style="background-color:gray">Footer</footer>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
