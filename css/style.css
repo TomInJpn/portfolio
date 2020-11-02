@@ -68,7 +68,7 @@ header nav::before{
 header nav::after{
   content:"";
   width: 140px;
-  height: 2000%;
+  height: 185vh;
   position: absolute;
   top: 5px;
   left: -70px;
@@ -181,6 +181,9 @@ article .card-title{
 
 
 
+  article .main_image{
+    left: -30px;
+  }
   article th{
     width:100px;
   }
