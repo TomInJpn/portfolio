@@ -115,10 +115,10 @@ article{
 }
 
 article .main_image{
-  width: 700px;
+  width: 80vh;
   position: fixed;
-  left: -300px;
-  top: 300px;
+  left: -50vw;
+  top: 40vh;
 }
 article .main_image img{
   opacity:0.5;
