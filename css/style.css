@@ -5,22 +5,168 @@
   text-decoration:none;
   list-style:none;
   color:#ffffff;
+  font-weight:nomal;
   font-family:"Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
 }
 img {
   vertical-align:bottom;
   width:100%;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   background:#000000;
 }
-
-header ul{
-  align-items: center;
+.row{
+  margin:0;
 }
 
+
+
+header{
+  background:#000000;
+  max-width:1200px;
+  margin:0 auto;
+  position:sticky;
+  top:-50px;
+  z-index:5;
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 1);
+}
+header div{
+  align-items:baseline;
+}
+header div h1{
+  margin:0;
+  padding:10px 10px 0;
+  letter-spacing:5px;
+}
+header div h1:first-letter{
+  color:#666666;
+}
+header div p{
+  margin:0;
+}
+header nav{
+  margin:0 10px;
+  position: relative;
+  line-height:90px;
+}
+header nav::before{
+  content:"";
+  width:200%;
+  height:calc(200% - 20px);
+  position:absolute;
+  top:5px;
+  left:-100%;
+  border:solid 1px #666666;
+  transform:scale(.5);
+  transform-origin: 100% 0;
+  pointer-events: none;
+}
+header nav::after{
+  content:"";
+  width: 140px;
+  height: 2000%;
+  position: absolute;
+  top: 5px;
+  left: -70px;
+  border: solid 1px #666666;
+  transform: scale(.5);
+  transform-origin: 100% 0;
+}
 header li{
-  width: 33%;
   text-align:center;
-  line-height: 90%;
+  margin:5px 0 5px 15px;
+  font-size:0.8rem;
+}
+header li:first-of-type{
+  margin:5px 5px 5px 105px;
+}
+header li a{
+  position:relative;
+  display:inline-block;
+  color:#ffffff;
+  cursor: pointer;
+}
+header li a::after{
+  width:0%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  content:"";
+  border-bottom:solid 1px #ffffff;
+  transition:.3s;
+}
+header li a:hover{
+  color:#ffffff;
+  text-decoration: none;
+}
+header li a:hover::after{
+  width:100%;
+}
+
+
+article{
+  max-width:1200px;
+  margin:0 auto;
+  position:relative;
+}
+
+article .main_image{
+  width: 700px;
+  position: absolute;
+  left: -300px;
+  top: 200px;
+  transform: rotate(5deg);
+}
+article .main_image img{
+  opacity:0.5;
+}
+article rb{
+  margin:20px 0 0;
+  padding:20px 0 0;
+  text-align:center;
+}
+article h2{
+  margin:0 0 30px;
+  font-size:1.5rem;
+  text-align:center;
+}
+article table{
+  max-width: 700px;
+  margin: 0 0 0 auto;
+}
+article tr{
+  border-top: solid 1px #666666;
+  line-height: 2rem;
+}
+article th{
+  width:70px;
+}
+article td{
+  padding:10px 0;
+}
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+
+  header nav::after{
+    width: 200px;
+    position: absolute;
+    top: 5px;
+    left: -100px;
+    border: solid 1px #666666;
+    transform: scale(.5);
+    transform-origin: 100% 0;
+  }
+
+  article th{
+    width:100px;
+  }
+
 }

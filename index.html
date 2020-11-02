@@ -8,28 +8,31 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>My portforio</title>
+  <title>My portfolio</title>
 </head>
 <body>
 
-<header id="header" class="container-md">
+<header class="header" class="container">
   <div class="row">
-    <h1 class="col-xs-6">My portforio</h1>
-    <p class="col-xs-6">雑草のように</p>
+    <h1>Portforio</h1>
+    <p>雑草のように</p>
   </div>
-  <nav class="container-md">
+  <nav class="col-xs-6">
     <ul class="row">
-      <li class="col-xs-4">Self-introduction</li>
-      <li class="col-xs-4">Portforio</li>
-      <li class="col-xs-4">Contact</li>
+      <li class="col-xs-2"><a href="#abountMe">About me</a></li>
+      <li class="col-xs-2"><a href="#portfolio">Portforio</a></li>
+      <li class="col-xs-2"><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <article>
+  <div class="main_image">
+    <img src="img/main.jpg" alt="">
+  </div>
   <section class="container-fluid">
     <div class="row">
-      <rb class="col-sm-12">Self-introduction</rb>
+      <rb class="col-sm-12" id="abountMe">About me</rb>
       <h2 class="col-sm-12">自己紹介</h2>
       <table summary="Self-introduction">
         <tr>
@@ -39,18 +42,18 @@
         <tr>
           <th>学歴</th>
           <td>
-            <div>
-              <time datetime="1992-02">1992/3</time>
-              私立　山口県桜ケ丘高等学校　卒業
-            </div>
-            <div>
-              <time datetime="1996-03">1996/3</time>
-              私立　大阪産業大学　工学部　交通機械工学科　卒業
-            </div>
-            <div>
-              <time datetime="1998-03">1998/3</time>
-              私立　大阪産業大学大学院　工学研究科　機械工学専攻　博士前期課程　卒業
-            </div>
+            <dl>
+              <dt><time datetime="1992-02">1992年3月卒業</time></dt>
+              <dd>私立山口県桜ケ丘高等学校</dd>
+            </dl>
+            <dl>
+              <dt><time datetime="1996-03">1996年3月卒業</time></dt>
+              <dd>私立大阪産業大学工学部交通機械工学科</dd>
+            </dl>
+            <dl>
+              <dt><time datetime="1998-03">1998年3月卒業</time></dt>
+              <dd>私立大阪産業大学大学院工学研究科機械工学専攻博士前期課程</dd>
+            </dl>
           </td>
         </tr>
         <tr>
@@ -58,14 +61,15 @@
           <td>
             <p>リーマンショックまで、工場勤務（サンガリア・パナソニック・東京エレクトロン）で、日本の「ものづくり」を学ぶ。「Made in Japan」に誇りを持っていきたいと考えています。</p>
             <p>その後、ECサイトへ転向。</p>
-            <p>定年後、自身でプログラムを販売したく考えTechCampを受講</p>
+            <p>定年後、自身でプログラムを販売できないかと考えTechCampを受講。2020年10月31日卒業</p>
+            <p>受講中にpaiza B rank を20日間で獲得</p>
             <p>年齢は高いですが、バブル崩壊・リーマンショック・コロナ不況と３度の荒波を経験しておりますので、簡単にはへこたれません。落ち込むこともありますが、自分で立ち上がります。</p>
           </td>
         </tr>
         <tr>
           <th>プログラミングについて</th>
           <td>
-            元来、ものづくりが好きです。
+            <p>元来、ものづくりが好きで、工場に勤めておりました。</p><p>ドライバーの回し方などの技術から工程の管理や進捗の確認。5Sの徹底や前準備。こだわるところはこだわり、そうでない部分は効率優先など、プログラミングにはその全てが詰まっていて、工場のように大規模な土地を必要としない、非常に魅力的な分野に感じております。</p><p>また、改廃が早いので一生学んで行けること、PCがあればどこでも学習が可能なことも魅力の一つかと考えております。</p>
           </td>
         </tr>
       </table>
@@ -74,7 +78,7 @@
 
   <section class="container-fluid">
     <div class="row">
-      <rb class="col-sm-12">Portfolio</rb>
+      <rb class="col-sm-12" id="portfolio">Portfolio</rb>
       <h2 class="col-sm-12">ポートフォリオ</h2>
       <div></div>
       <div></div>
@@ -85,7 +89,7 @@
 
   <section class="container-fluid">
     <div class="row">
-      <rb class="col-sm-12">Contact</rb>
+      <rb class="col-sm-12" id="contact">Contact</rb>
       <h2 class="col-sm-12">コンタクト</h2>
     </div>
   </section>
