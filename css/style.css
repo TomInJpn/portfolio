@@ -25,6 +25,35 @@ body {
 
 
 
+@keyframes onload {
+  0%    { transform:rotate(0deg);}
+  100%  { transform:rotate(360deg);}
+}
+.loading{
+  background: #000000;
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:3;
+}
+.loading svg{
+  width:50px;
+  height:50px;
+  position: absolute;
+  top:calc( 50% - 25px );
+  left:calc( 50% - 25px );
+}
+.loading circle{
+  stroke-dasharray: calc(45 * 3.14) 10;
+  animation:onload 1s infinite linear;
+	stroke: #ffffff;
+  transform-origin:center center 0;
+}
+
+
+
 @keyframes top_shrink {
   0% { top:150px;left:150px;transform:scale(1);opacity: 0;}
   50% { top:150px;left:150px;transform:scale(1);opacity: 1;}
@@ -34,26 +63,20 @@ body {
   0% { stroke-dasharray: 0 2820;}
   100% { stroke-dasharray: 2820 2820; }
 }
-
-
-
-svg {
+header svg {
   width: 900px;
   height: 900px;
   position:absolute;
   top:-425px;
   left:-455px;
 }
-svg circle {
+header svg circle {
   fill: transparent;
 	stroke: #ffffff;
 	stroke-width: 1;
   animation: circle 3s;
   transition: 0.3s;
 }
-
-
-
 .top {
   background: white;
   width: 1px;
@@ -91,6 +114,9 @@ svg circle {
 .top:hover circle{
     fill: rgba(255,255,255,0.1);
 }
+
+
+
 header{
   background:#000000;
   max-width:1200px;
@@ -181,7 +207,6 @@ article{
   margin:0 auto;
   position:relative;
 }
-
 article .aboutme_image{
   width: 80vh;
   position: fixed;
