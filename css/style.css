@@ -25,13 +25,79 @@ body {
 
 
 
+@keyframes top_shrink {
+  0% { top:150px;left:150px;transform:scale(1);opacity: 0;}
+  50% { top:150px;left:150px;transform:scale(1);opacity: 1;}
+  100% { top:40px;left:45px;transform:scale(.5);opacity: 1;}
+}
+@keyframes circle {
+  0% { stroke-dasharray: 0 2820;}
+  100% { stroke-dasharray: 2820 2820; }
+}
+
+
+
+svg {
+  width: 900px;
+  height: 900px;
+  position:absolute;
+  top:-425px;
+  left:-455px;
+}
+svg circle {
+  fill: transparent;
+	stroke: #ffffff;
+	stroke-width: 1;
+  animation: circle 3s;
+  transition: 0.3s;
+}
+
+
+
+.top {
+  background: white;
+  width: 1px;
+  height: 40px;
+  position: absolute;
+  left: 45px;
+  top: 40px;
+  z-index:1;
+  transform:scale(.5);
+  transform-origin: 100% 0;
+  animation: top_shrink 2s;
+}
+.top:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -14px;
+  top: 5px;
+  border-top: solid 1px white;
+  border-right: solid 1px white;
+  transform: rotate(-45deg);
+}
+.top:after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -14px;
+  top: 5px;
+  border-top: solid 1px white;
+  border-right: solid 1px white;
+  transform: rotate(-45deg);
+}
+.top:hover circle{
+    fill: rgba(255,255,255,0.1);
+}
 header{
   background:#000000;
   max-width:1200px;
   margin:0 auto;
   position:sticky;
   top:-50px;
-  z-index:5;
+  z-index:1;
   box-shadow:0 0 10px 0 rgba(0, 0, 0, 1);
 }
 header div{
@@ -67,11 +133,11 @@ header nav::before{
 }
 header nav::after{
   content:"";
-  width: 140px;
+  width: 180px;
   height: 185vh;
   position: absolute;
   top: 5px;
-  left: -70px;
+  left: -90px;
   border: solid 1px #666666;
   transform: scale(.5);
   transform-origin: 100% 0;
@@ -89,6 +155,7 @@ header li a{
   display:block;
   color:#ffffff;
   cursor: pointer;
+  z-index:2;
 }
 header li a::after{
   width:0%;
@@ -106,6 +173,7 @@ header li a:hover{
 header li a:hover::after{
   width:100%;
 }
+
 
 
 article{
@@ -127,32 +195,37 @@ article .main_image img{
 article .main_image+section{
   position: relative;
 }
-article rb{
-  margin:20px 0 0;
-  padding:20px 0 0;
+article rb,footer rb{
+  margin:100px 0 0;
+  padding:30px 0 0;
+  font-size:.8rem;
   text-align:center;
 }
-article h2{
+article h2,footer h2{
   margin:0 0 30px;
-  font-size:1.5rem;
+  font-size:1.2rem;
   text-align:center;
 }
 article table{
   max-width: 700px;
   margin: 0 0 0 auto;
+  font-size:.8rem;
 }
 article tr{
   border-top: solid 1px #666666;
   line-height: 2rem;
 }
 article th{
-  width:70px;
+  width:90px;
 }
 article td{
   padding:10px 0;
 }
 article ul{
   max-width:700px;
+  width:75%;
+  margin:0 0 0 auto;
+  font-size:.8rem;
 }
 article .card-body p,li,div{
   color:#666666;
@@ -166,9 +239,45 @@ article .card-title{
 
 
 
+footer{
+  background: rgba(255,255,255,0.2);
+  margin:150px 0 0;
+  padding:0 0 50px;
+  position:relative;
+  font-size:.8rem;
+  text-align: center;
+}
+footer>*{
+  max-width:700px;
+  width:75%;
+  margin:50px 0 0 auto;
+}
+footer rb{
+  display: block;
+}
+footer a{
+  font-size: 2.5rem;
+}
+footer a+a{
+  margin:0 0 0 50px;
+}
+
+
+
+
 
 @media screen and (min-width:768px) {
 
+  @keyframes top_shrink {
+    0% { top:150px;right:150px;transform:scale(1);opacity: 0;}
+    50% { top:150px;right:150px;transform:scale(1);opacity: 1;}
+    100% { top:40px;right:45px;transform:scale(.5);opacity: 1;}
+  }
+  .top {
+    left: unset;
+    right:45px;
+    animation: top_shrink 3s;
+  }
   header nav::after{
     width: 200px;
     position: absolute;
@@ -192,6 +301,13 @@ article .card-title{
   }
   article .card-group{
     margin:0 0 0 100px;
+  }
+
+
+
+  footer{
+    background: rgba(255,255,255,0.2);
+    margin:150px 0 0;
   }
 
 }

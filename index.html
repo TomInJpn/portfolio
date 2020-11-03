@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta content='ポートフォリオサイトです。' name='description'>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -12,12 +11,21 @@
 </head>
 <body>
 
-<header class="header" class="container">
+
+
+
+
+  <header class="header" class="container">
   <div class="row">
     <h1>Portfolio</h1>
-    <p>雑草のように</p>
+    <p>Like weeds</p>
   </div>
   <nav class="col-xs-6">
+    <a href="#top" class="top">
+      <svg>
+        <circle cx="450" cy="450" r="449">
+      </svg>
+    </a>
     <ul class="row">
       <li class="col-xs-2"><a href="#abountMe">About me</a></li>
       <li class="col-xs-2"><a href="#portfolio">Portfolio</a></li>
@@ -69,7 +77,7 @@
         <tr>
           <th>プログラミングについて</th>
           <td>
-            <p>元来、ものづくりが好きで、工場に勤めておりました。</p><p>ドライバーの回し方などの技術から工程の管理や進捗の確認。5Sの徹底や前準備。こだわるところはこだわり、そうでない部分は効率優先など、プログラミングにはその全てが詰まっていて、工場のように大規模な土地を必要としない、非常に魅力的なものづくりに感じております。</p><p>また、改廃が早いので一生学んで行けること、PCがあればどこでも学習が可能なことも魅力の一つかと考えております。</p>
+            <p>元来、ものづくりが好きで、工場に勤めておりました。</p><p>ドライバーの回し方などの技術から工程の管理や進捗の確認。5Sの徹底や前準備。こだわるところはこだわり、そうでない部分は効率優先など、プログラミングはその全てが詰まっていて、工場のように大規模な土地を必要としない、非常に魅力的なものづくりに感じております。</p><p>また、改廃が早いので一生学んで行けること、PCがあればどこでも学習が可能なことも魅力の一つかと考えております。</p>
           </td>
         </tr>
       </table>
@@ -105,12 +113,13 @@
           <div class="card-body">
             <h5 class="card-title"><div>チーム制作/カリキュラム</div>フリマサンプル</h5>
             <img src="img/portfolio_frema_t.jpg" alt="">
-            <p class="card-text mt-3">フリーマーケットのサンプルサイトです。担当箇所は</p>
+            <p class="card-text mt-3">フリーマーケットのサンプルサイトです。担当箇所は
             <ul>
-              <li><div>【フロント】</div>User sign in/out</li>
-              <li><div>【サーバー】</div>User sign in/out</li>
-              <li><div>【サーバー】</div>購入機能</li>
+              <li>【フロント】User sign in/out</li>
+              <li>【サーバー】User sign in/out</li>
+              <li>【サーバー】購入機能</li>
             </ul>
+            </p>
             <a href="https://github.com/TomInJpn/freeMarket" class="card-text text-white bg-dark badge align-middle" roll="button" target="”_blank”">
               <small class="fa fa-github" aria-hidden="true"><small class="font-weight-bold"> GitHub</small></small>
             </a>
@@ -147,16 +156,24 @@
 
 
 <footer>
-  <section class="container-fluid">
-    <div class="row">
-      <rb class="col-sm-12" id="contact">Contact</rb>
-      <h2 class="col-sm-12">コンタクト</h2>
-    </div>
+  <section class="">
+      <rb id="contact">Contact</rb>
+      <h2>コンタクト</h2>
+      <p>お問い合わせなどございましたらTwitterのDMまでお願いいたします。</p>
+      <div>
+        <a href="https://twitter.com/MrTom_2020" target="_blank"><i class="fa fa-twitter pt-1" aria-hidden="true"></i></a>
+        <a href="https://github.com/TomInJpn" target="_blank"><i class="fa fa-github pt-1" aria-hidden="true"></i></a>
+      </div>
   </section>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+
+
 </body>
 </html>
