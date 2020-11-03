@@ -12,7 +12,7 @@ function aboutme_image_effect(scroll_top){
   });
 }
 function portfolio_image_effect(portfolio_top,scroll_top){
-  if(portfolio_top<screen_height/2 && scroll_height-scroll_top>200){
+  if(portfolio_top<screen_height/2 && scroll_height-scroll_top>50){
     $(".portfolio_image").css("animation","portfolio_img 2s");
     $(".portfolio_image").addClass("portfolio_image_after");
   }
