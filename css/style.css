@@ -182,17 +182,17 @@ article{
   position:relative;
 }
 
-article .main_image{
+article .aboutme_image{
   width: 80vh;
   position: fixed;
   left: -50vw;
   top: 40vh;
-}
-article .main_image img{
   opacity:0.5;
+}
+article .aboutme_image img{
   transform: rotate(5deg);
 }
-article .main_image+section{
+article .aboutme_image+section{
   position: relative;
 }
 article rb,footer rb{
@@ -221,6 +221,31 @@ article th{
 article td{
   padding:10px 0;
 }
+@keyframes portfolio_img {
+  0%  {right:-600px;top:20vh;opacity:0;   transform:rotate(90deg);}
+  100%{right:0;     top:40vh;opacity:0.7; transform:rotate(5deg);}
+}
+@keyframes portfolio_img_remove {
+  0%  {right:0;     top:40vh;opacity:0.7; transform:rotate(5deg);}
+  100%{right:-600px;top:20vh;opacity:0;   transform:rotate(90deg);}
+}
+article .portfolio_image{
+  width: 80vh;
+  position: fixed;
+  right: 0;
+  top: 40vh;
+  opacity:0.5;
+  right: -600px;
+  top: 20vh;
+  opacity:0;
+  transform: rotate(90deg);
+}
+article .portfolio_image_after{
+  right: 0;
+  top: 40vh;
+  opacity:0.7;
+  transform: rotate(5deg);
+}
 article ul{
   max-width:700px;
   width:75%;
@@ -235,6 +260,9 @@ article .card-body div{
 }
 article .card-title{
   color:#000000;
+}
+article .portfolio_note{
+  margin: 0 0 0 100px;
 }
 
 
@@ -293,7 +321,8 @@ footer a+a{
 
 
 
-  article .main_image{
+  article .aboutme_image{
+    width:700px;
     left: -30px;
   }
   article th{
