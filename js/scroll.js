@@ -1,6 +1,7 @@
 $(function(){
 
   let scroll_top;
+  let portfolio_top
   const screen_height=$(window).height();
   const scroll_height=$("body").height()-screen_height;
   const portfolio_height=$("#portfolio").offset().top;
@@ -26,14 +27,14 @@ $(function(){
 
   aboutme_image_effect($(window).scrollTop());
 
-    $(window).on("scroll",function(){
+  $(window).on("scroll",function(){
 
-      scroll_top=$(this).scrollTop();
-      aboutme_image_effect(scroll_top);
+    scroll_top=$(window).scrollTop();
+    aboutme_image_effect(scroll_top);
 
-      portfolio_top=portfolio_height-scroll_top
-      portfolio_image_effect(portfolio_top,scroll_top);
+    portfolio_top=portfolio_height-scroll_top
+    portfolio_image_effect(portfolio_top,scroll_top);
 
-    });
+  });
 
 });
