@@ -128,7 +128,7 @@ header div h1{
   letter-spacing:5px;
 }
 header div h1:first-letter{
-  color:#666666;
+  color:#61C359;
 }
 header div p{
   margin:0;
@@ -267,6 +267,11 @@ article ul{
   max-width:700px;
   width:75%;
   margin:0 0 0 auto;
+  font-size:.8rem;
+}
+article ul ul{
+  width:100%;
+  margin:0;
   font-size:.8rem;
 }
 article .card-body p,li,div{
