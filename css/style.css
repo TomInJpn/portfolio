@@ -72,8 +72,8 @@ header svg{
 }
 header svg circle{
   fill:transparent;
-	stroke:#ffffff;
-	stroke-width:1;
+  stroke:#ffffff;
+  stroke-width:1;
   animation:circle 3s;
   transition:0.3s;
 }
