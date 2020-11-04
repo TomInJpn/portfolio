@@ -84,7 +84,6 @@ header nav .top{
   z-index:1;
   transform:scale(.5);
   transform-origin:100% 0;
-  animation:top_shrink 3s;
 }
 header nav .top:before{
   content:'';

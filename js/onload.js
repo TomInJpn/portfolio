@@ -1,9 +1,16 @@
 $(function(){
 
-  $(window).on('load', function() {
-    setTimeout(function(){$(".loading").css("display","none");},1000);
+  function portfolio_onload(){
+    $(".loading").css("display","none");
+    $("header nav .top").css("animation","top_shrink 3s");
+  }
+
+  $(window).on('load', function(){
+    portfolio_onload();
   });
 
-  setTimeout(function(){$(".loading").css("display","none");},5000);
+  setTimeout(function(){
+    portfolio_onload();
+  },1000);
 
 });
