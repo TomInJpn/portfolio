@@ -1,4 +1,4 @@
-* {
+*{
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -8,16 +8,16 @@
   font-weight:nomal;
   font-family:"Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
 }
-img {
+img{
   vertical-align:bottom;
   width:100%;
 }
 html{
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
-body {
+body{
   background:#000000;
-  overflow-x: hidden;
+  overflow-x:hidden;
 }
 .row{
   margin:0;
@@ -25,12 +25,12 @@ body {
 
 
 
-@keyframes onload {
-  0%    { transform:rotate(0deg);}
-  100%  { transform:rotate(360deg);}
+@keyframes onload{
+  0%  {transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
 }
 .loading{
-  background: #000000;
+  background:#000000;
   position:fixed;
   top:0;
   right:0;
@@ -41,78 +41,71 @@ body {
 .loading svg{
   width:50px;
   height:50px;
-  position: absolute;
+  position:absolute;
   top:calc( 50% - 25px );
   left:calc( 50% - 25px );
 }
 .loading circle{
-  stroke-dasharray: calc(45 * 3.14) 10;
+  stroke-dasharray:calc(45 * 3.14) 10;
   animation:onload 1s infinite linear;
-	stroke: #ffffff;
+	stroke:#ffffff;
   transform-origin:center center 0;
 }
 
 
 
-@keyframes top_shrink {
-  0% { top:150px;left:150px;transform:scale(1);opacity: 0;}
-  50% { top:150px;left:150px;transform:scale(1);opacity: 1;}
-  100% { top:40px;left:45px;transform:scale(.5);opacity: 1;}
+@keyframes top_shrink{
+  0%  {top:150px; left:150px; transform:scale(1); opacity:0;}
+  50% {top:150px; left:150px; transform:scale(1); opacity:1;}
+  100%{top:35px;  left:45px;  transform:scale(.5);opacity:1;}
 }
-@keyframes circle {
-  0% { stroke-dasharray: 0 2820;}
-  100% { stroke-dasharray: 2820 2820; }
+@keyframes circle{
+  0%{stroke-dasharray:0 2820;}
+  100%{stroke-dasharray:2820 2820; }
 }
-header svg {
-  width: 900px;
-  height: 900px;
+header svg{
+  width:900px;
+  height:900px;
   position:absolute;
   top:-425px;
   left:-455px;
 }
-header svg circle {
-  fill: transparent;
-	stroke: #ffffff;
-	stroke-width: 1;
-  animation: circle 3s;
-  transition: 0.3s;
+header svg circle{
+  fill:transparent;
+	stroke:#ffffff;
+	stroke-width:1;
+  animation:circle 3s;
+  transition:0.3s;
 }
-.top {
-  background: white;
-  width: 1px;
-  height: 40px;
-  position: absolute;
-  left: 45px;
-  top: 40px;
+header nav .top{
+  position:absolute;
+  left:45px;
+  top:35px;
   z-index:1;
   transform:scale(.5);
-  transform-origin: 100% 0;
-  animation: top_shrink 2s;
+  transform-origin:100% 0;
+  animation:top_shrink 3s;
 }
-.top:before {
-  content: '';
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: -14px;
-  top: 5px;
-  border-top: solid 1px white;
-  border-right: solid 1px white;
-  transform: rotate(-45deg);
+header nav .top:before{
+  content:'';
+  width:30px;
+  height:30px;
+  position:absolute;
+  left:-14px;
+  top:5px;
+  border-top:solid 1px white;
+  border-right:solid 1px white;
+  transform:rotate(-45deg);
 }
-.top:after {
-  content: '';
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: -14px;
-  top: 5px;
-  border-top: solid 1px white;
-  border-right: solid 1px white;
-  transform: rotate(-45deg);
+header nav .top:after{
+  content:'';
+  background:white;
+  width:1px;
+  height:40px;
+  position:absolute;
 }
-.top:hover circle{
-    fill: rgba(255,255,255,0.1);
+header nav .top:hover circle{
+  fill:rgba(255,255,255,0.1);
 }
 
 
@@ -142,49 +135,48 @@ header div p{
 }
 header nav{
   margin:0 10px;
-  position: relative;
+  position:relative;
   line-height:90px;
 }
 header nav::before{
   content:"";
   width:200%;
-  height:calc(200% - 20px);
+  height:200%;
   position:absolute;
-  top:5px;
   left:-100%;
   border:solid 1px #666666;
   transform:scale(.5);
-  transform-origin: 100% 0;
-  pointer-events: none;
+  transform-origin:100% 0;
+  pointer-events:none;
 }
 header nav::after{
   content:"";
-  width: 180px;
-  height: 185vh;
-  position: absolute;
-  top: 5px;
-  left: -90px;
-  border: solid 1px #666666;
-  transform: scale(.5);
-  transform-origin: 100% 0;
+  width:180px;
+  height:185vh;
+  position:absolute;
+  top:0;
+  left:-90px;
+  border:solid 1px #666666;
+  transform:scale(.5);
+  transform-origin:100% 0;
 }
 header li{
   text-align:center;
-  margin:5px 0 5px 15px;
+  margin:0 0 0 15px;
   font-size:0.8rem;
 }
 header li:first-of-type{
-  margin:5px 5px 5px 120px;
+  margin:0 0 0 120px;
 }
 header li a{
   position:relative;
   display:block;
   color:#ffffff;
-  cursor: pointer;
+  cursor:pointer;
   z-index:2;
 }
 header li a::after{
-  width:0%;
+  width:0;
   position:absolute;
   bottom:0;
   left:0;
@@ -194,7 +186,7 @@ header li a::after{
 }
 header li a:hover{
   color:#ffffff;
-  text-decoration: none;
+  text-decoration:none;
 }
 header li a:hover::after{
   width:100%;
@@ -208,17 +200,17 @@ article{
   position:relative;
 }
 article .aboutme_image{
-  width: 80vh;
-  position: fixed;
-  left: -50vw;
-  top: 40vh;
+  width:80vh;
+  position:fixed;
+  left:-50vw;
+  top:40vh;
   opacity:0.5;
 }
 article .aboutme_image img{
-  transform: rotate(5deg);
+  transform:rotate(5deg);
 }
 article .aboutme_image+section{
-  position: relative;
+  position:relative;
 }
 article rb,footer rb{
   margin:100px 0 0;
@@ -232,13 +224,13 @@ article h2,footer h2{
   text-align:center;
 }
 article table{
-  max-width: 700px;
-  margin: 0 0 0 auto;
+  max-width:700px;
+  margin:0 0 0 auto;
   font-size:.8rem;
 }
 article tr{
-  border-top: solid 1px #666666;
-  line-height: 2rem;
+  border-top:solid 1px #666666;
+  line-height:2rem;
 }
 article th{
   width:90px;
@@ -246,30 +238,30 @@ article th{
 article td{
   padding:10px 0;
 }
-@keyframes portfolio_img {
+@keyframes portfolio_img{
   0%  {right:-600px;top:20vh;opacity:0;   transform:rotate(90deg);}
   100%{right:0;     top:40vh;opacity:0.7; transform:rotate(5deg);}
 }
-@keyframes portfolio_img_remove {
+@keyframes portfolio_img_remove{
   0%  {right:0;     top:40vh;opacity:0.7; transform:rotate(5deg);}
   100%{right:-600px;top:20vh;opacity:0;   transform:rotate(90deg);}
 }
 article .portfolio_image{
-  width: 80vh;
-  position: fixed;
-  right: 0;
-  top: 40vh;
+  width:80vh;
+  position:fixed;
+  right:0;
+  top:40vh;
   opacity:0.5;
-  right: -600px;
-  top: 20vh;
+  right:-600px;
+  top:20vh;
   opacity:0;
-  transform: rotate(90deg);
+  transform:rotate(90deg);
 }
 article .portfolio_image_after{
-  right: 0;
-  top: 40vh;
+  right:0;
+  top:40vh;
   opacity:0.7;
-  transform: rotate(5deg);
+  transform:rotate(5deg);
 }
 article ul{
   max-width:700px;
@@ -287,18 +279,18 @@ article .card-title{
   color:#000000;
 }
 article .portfolio_note{
-  margin: 0 0 0 100px;
+  margin:0 0 0 100px;
 }
 
 
 
 footer{
-  background: rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.2);
   margin:150px 0 0;
   padding:0 0 50px;
   position:relative;
   font-size:.8rem;
-  text-align: center;
+  text-align:center;
 }
 footer>*{
   max-width:700px;
@@ -306,10 +298,10 @@ footer>*{
   margin:50px 0 0 auto;
 }
 footer rb{
-  display: block;
+  display:block;
 }
 footer a{
-  font-size: 2.5rem;
+  font-size:2.5rem;
 }
 footer a+a{
   margin:0 0 0 50px;
@@ -319,26 +311,20 @@ footer a+a{
 
 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px){
 
-  @keyframes top_shrink {
-    0% { top:150px;right:150px;transform:scale(1);opacity: 0;}
-    50% { top:150px;right:150px;transform:scale(1);opacity: 1;}
-    100% { top:40px;right:45px;transform:scale(.5);opacity: 1;}
+  @keyframes top_shrink{
+    0%  {top:150px; right:150px;transform:scale(1); opacity:0;}
+    50% {top:150px; right:150px;transform:scale(1); opacity:1;}
+    100%{top:35px;  right:45px; transform:scale(.5);opacity:1;}
   }
-  .top {
-    left: unset;
+  header nav .top{
+    left:unset;
     right:45px;
-    animation: top_shrink 3s;
   }
   header nav::after{
-    width: 200px;
-    position: absolute;
-    top: 5px;
-    left: -100px;
-    border: solid 1px #666666;
-    transform: scale(.5);
-    transform-origin: 100% 0;
+    width:200px;
+    left:-100px;
   }
   header li{
     width:100px;
@@ -348,20 +334,13 @@ footer a+a{
 
   article .aboutme_image{
     width:700px;
-    left: -30px;
+    left:-30px;
   }
   article th{
     width:100px;
   }
   article .card-group{
     margin:0 0 0 100px;
-  }
-
-
-
-  footer{
-    background: rgba(255,255,255,0.2);
-    margin:150px 0 0;
   }
 
 }
