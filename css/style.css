@@ -273,7 +273,7 @@ article ul ul{
   margin:0;
   font-size:.8rem;
 }
-article .card-body p,li,div{
+article .card-body p,article .card-body li,article .card-body dt,article .card-body dd{
   color:#666666;
 }
 article .card-body div{
