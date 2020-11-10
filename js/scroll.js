@@ -1,10 +1,10 @@
 $(function(){
 
   let scroll_top;
-  let portfolio_top;
+  let whatlearned_top;
   const screen_height=$(window).height();
   const scroll_height=$("body").height()-screen_height;
-  const portfolio_height=$("#portfolio").offset().top;
+  const whatlearned_height=$("#whatLearned").offset().top;
 
   function aboutme_image_effect(scroll_top){
     $(".aboutme_image").css({
@@ -12,14 +12,14 @@ $(function(){
       opacity:`calc( 0.5 - ${scroll_top/3000} )`,
     });
   }
-  function portfolio_image_effect(portfolio_top,scroll_top){
-    if(portfolio_top<screen_height/2 && scroll_height-scroll_top>50){
-      $(".portfolio_image").css("animation","portfolio_img 2s");
-      $(".portfolio_image").addClass("portfolio_image_after");
+  function learned_image_effect(whatlearned_top,scroll_top){
+    if(whatlearned_top<screen_height/2 && scroll_height-scroll_top>50){
+      $(".whatLearned_image").css("animation","whatLearned_img 2s");
+      $(".whatLearned_image").addClass("whatLearned_image_after");
     }
-    else if($(".portfolio_image").hasClass("portfolio_image_after")){
-      $(".portfolio_image").css("animation","portfolio_img_remove 1s");
-      $(".portfolio_image").removeClass("portfolio_image_after");
+    else if($(".whatLearned_image").hasClass("whatLearned_image_after")){
+      $(".whatLearned_image").css("animation","whatLearned_img_remove 1s");
+      $(".whatLearned_image").removeClass("whatLearned_image_after");
     }
   }
 
@@ -32,8 +32,8 @@ $(function(){
     scroll_top=$(window).scrollTop();
     aboutme_image_effect(scroll_top);
 
-    portfolio_top=portfolio_height-scroll_top;
-    portfolio_image_effect(portfolio_top,scroll_top);
+    whatlearned_top=whatlearned_height-scroll_top;
+    learned_image_effect(whatlearned_top,scroll_top);
 
   });
 
