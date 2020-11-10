@@ -13,8 +13,8 @@ $(function(){
     });
   }
   function learned_image_effect(whatlearned_top,scroll_top){
-    if(whatlearned_top<screen_height/2 && scroll_height-scroll_top>50){
-      $(".whatLearned_image").css("animation","whatLearned_img 2s");
+    if(whatlearned_top<screen_height/2 && scroll_height-scroll_top>100){
+      $(".whatLearned_image").css("animation","whatLearned_img 1s");
       $(".whatLearned_image").addClass("whatLearned_image_after");
     }
     else if($(".whatLearned_image").hasClass("whatLearned_image_after")){
