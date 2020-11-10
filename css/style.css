@@ -162,10 +162,10 @@ header nav::after{
 header li{
   text-align:center;
   margin:0 0 0 15px;
-  font-size:0.8rem;
+  font-size:0.5rem;
 }
 header li:first-of-type{
-  margin:0 0 0 120px;
+  margin:0 0 0 100px;
 }
 header li a{
   position:relative;
@@ -208,7 +208,7 @@ article .aboutme_image{
 article .aboutme_image img{
   transform:rotate(5deg);
 }
-article .aboutme_image+section{
+article section{
   position:relative;
 }
 article rb,footer rb{
@@ -237,15 +237,15 @@ article th{
 article td{
   padding:10px 0;
 }
-@keyframes portfolio_img{
+@keyframes whatLearned_img{
   0%  {right:-600px;top:20vh;opacity:0;   transform:rotate(90deg);}
   100%{right:0;     top:40vh;opacity:0.7; transform:rotate(5deg);}
 }
-@keyframes portfolio_img_remove{
+@keyframes whatLearned_img_remove{
   0%  {right:0;     top:40vh;opacity:0.7; transform:rotate(5deg);}
   100%{right:-600px;top:20vh;opacity:0;   transform:rotate(90deg);}
 }
-article .portfolio_image{
+article .whatLearned_image{
   width:80vh;
   position:fixed;
   right:0;
@@ -256,15 +256,15 @@ article .portfolio_image{
   opacity:0;
   transform:rotate(90deg);
 }
-article .portfolio_image_after{
+article .whatLearned_image_after{
   right:0;
   top:40vh;
   opacity:0.7;
   transform:rotate(5deg);
 }
-article ul{
+article ul,article ol{
   max-width:700px;
-  width:75%;
+  width:70%;
   margin:0 0 0 auto;
   font-size:.8rem;
 }
@@ -343,7 +343,7 @@ footer a+a{
   article th{
     width:100px;
   }
-  article .card-group{
+  article ol{
     margin:0 0 0 100px;
   }
 
